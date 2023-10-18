@@ -17,10 +17,11 @@
     background-color: #414141;
     padding: 0.5rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    margin: 0;
 }
 
 .navbar > div { /* içeriği ortalamak için bir container ekledik */
-    max-width: 1200px; /* Maksimum genişlik ayarı - istediğiniz bir değeri kullanabilirsiniz */
+    width: 1200px; /* Maksimum genişlik ayarı - istediğiniz bir değeri kullanabilirsiniz */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -48,13 +49,73 @@
 }
 
 .placeholder{
-    min-height: 800px;
-
+    min-height: 400px;
 }
 
-/* Footer stili */
+.image-content img {
+    width: 50vw; /* Resmin bölümün genişliğini aşmamasını sağlar */
+    height: auto;
+    border-radius: 5px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr; /* İlk bölüm (metin) için mevcut alanın tamamını kullan, ikinci bölüm (resim) için 300px genişlik belirle */
+    gap: 40px; /* İki bölüm arasındaki boşluğu ayarlar */
+}
+
+.text-content {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.text-content h1{
+    color: #e16e6e;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.text-content p{
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.button{
+ background-color: #414141;
+ padding: 1.5rem;
+ width: 7rem;
+ border-radius: 10px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+.placeholder {
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 eşit genişlikte sütun oluştur */
+    gap: 30px; /* Bloklar arasında 20px boşluk bırak */
+}
+
+.placeholder div {
+    background-color: #c0c0c0; /* Hafif gri bir arka plan rengi */
+    padding: 2rem; /* İçerik ve blok kenarı arasında 20px boşluk */
+    border-radius: 5px; /* Blokların köşelerini yumuşat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekleyerek derinlik kat */
+}
+
+.placeholder div h6{
+    color: #e16e6e;
+    font-size: larger;
+    margin-bottom: 2rem;
+}
+
 footer {
-    padding: 30px;
+    padding: 3rem;
     background-color: #e98a8a;
     text-align: center;
 }
