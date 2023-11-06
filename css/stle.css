@@ -123,10 +123,12 @@ main {
 .tittel4 {
   color: rgb(94, 16, 16);
   padding: 1%;
+  text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   font-variant: small-caps;
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
+  cursor: pointer;
 }
 article {
   text-indent: 6px;
@@ -141,7 +143,9 @@ article {
   margin: 20px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 4 6px rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  border-style: inset;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 footer {
