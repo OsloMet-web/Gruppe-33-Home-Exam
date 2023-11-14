@@ -1,13 +1,11 @@
 :root {
   --main-padding: 15%;
-  --dark-color:#023535;
+  --dark-color: #023535;
   --header-color: #015958;
-  --button-color: #008F8c;
-  --light-color:#C7FFED;
-  --white-color:#fff;
+  --button-color: #008f8c;
+  --light-color: #c7ffed;
+  --white-color: #fff;
 }
-
-
 
 * {
   margin: 0;
@@ -27,8 +25,8 @@ body {
 }
 
 .navbar {
-  padding:1rem var(--main-padding);
-  background-color:var(--dark-color);
+  padding: 1rem var(--main-padding);
+  background-color: var(--dark-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
@@ -116,7 +114,7 @@ body {
 }
 
 .placeholder div {
-  background-color:var(--light-color); /* Hafif gri bir arka plan rengi */
+  background-color: var(--light-color); /* Hafif gri bir arka plan rengi */
   padding: 2rem; /* İçerik ve blok kenarı arasında 20px boşluk */
   border-radius: 5px; /* Blokların köşelerini yumuşat */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekleyerek derinlik kat */
@@ -133,28 +131,123 @@ main {
 
 footer {
   margin-top: 10px;
-  padding: 2rem  var(--main-padding);
+  padding: 2rem var(--main-padding);
   background-color: var(--button-color);
   text-align: center;
 }
 
-
-
 /* CSS FROM IMRAN */
-.mainview{
+.mainview {
   margin-left: var(--main-padding);
   margin-right: var(--main-padding);
   width: calc(100% - 2 * var(--main-padding));
-  background-color:var(--light-color);
+  background-color: var(--light-color);
 }
 
-
-.text-reference{
+.text-reference {
   background-color: antiquewhite;
-  
 }
 
-.images{
+.images {
   width: 100%;
   object-fit: cover;
+}
+
+/* From Bahar */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+header.hero {
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: justify;
+}
+
+header.hero h1,
+p {
+  line-height: 2rem;
+}
+
+header.hero img {
+  width: 100%;
+  min-width: 300px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+header.hero .section-text {
+  flex: 1.9;
+}
+
+header.hero .section-img {
+  flex: 1;
+}
+
+.button2 {
+  background-color: var(--button-color);
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+main .card {
+  display: flex;
+  align-items: center;
+  border: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+main .card article {
+  flex: 1;
+}
+
+main .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+figcaption {
+  font-style: italic;
+  font-size: x-small;
+}
+main .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* These rules come into play when the screen width is less than 700 pixels.
+*/
+
+@media screen and (max-width: 700px) {
+  header.hero {
+    flex-direction: column;
+  }
+
+  main .card {
+    flex-direction: column;
+  }
+
+  main .card:nth-child(even) {
+    flex-direction: column;
+  }
+}
+
+main .Accessibility-topical {
+  display: flex;
+  align-items: center;
+  border: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.Accessibility-topical img {
+  width: 600px;
 }
