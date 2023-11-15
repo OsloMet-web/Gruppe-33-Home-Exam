@@ -58,7 +58,7 @@
   background-color: var(--header-color);
 }
 
-.placeholder {
+.campus-info {
   min-height: 400px;
 }
 
@@ -104,21 +104,25 @@
   color: white;
 }
 
-.placeholder {
+.campus-info {
   margin: 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 eşit genişlikte sütun oluştur */
   gap: 30px; /* Bloklar arasında 20px boşluk bırak */
 }
 
-.placeholder div {
+.campus-info h3{
+  margin-bottom: 2rem;
+}
+
+.campus-info div {
   background-color: var(--light-color); /* Hafif gri bir arka plan rengi */
   padding: 2rem; /* İçerik ve blok kenarı arasında 20px boşluk */
   border-radius: 5px; /* Blokların köşelerini yumuşat */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekleyerek derinlik kat */
 }
 
-.placeholder div h6 {
+.campus-info div h6 {
   color: var(--header-color);
   font-size: larger;
   margin-bottom: 2rem;
@@ -243,13 +247,13 @@ main .card:nth-child(even) {
     width: 100%; /* Make the image full width */
 }
 
-.placeholder {
+.campus-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.placeholder > div {
+.campus-info > div {
   margin-bottom: 20px; /* Adds some space between each section */
 }
 
