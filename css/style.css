@@ -462,7 +462,9 @@ header.hero h1,
 p {
   line-height: 2rem;
 }
-
+header.hero a:hover {
+  color: coral;
+}
 header.hero img {
   width: 100%;
   min-width: 300px;
@@ -479,12 +481,13 @@ header.hero .section-img {
 
 .button2 {
   background-color: var(--button-color);
-  color: white;
   cursor: pointer;
   opacity: 0.9;
   padding: 0.3rem;
   border-radius: 5px;
+
 }
+
 main .card {
   display: flex;
   align-items: center;
