@@ -10,18 +10,28 @@
   <body>
     <header>
       <nav class="navbar">
-        <div>
+        <input id="burger-menu-toggle" type="checkbox" />
+
+        <div id="hamburger">
+          <label id="hamburger-lines" for="burger-menu-toggle">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </label>
           <h4><a class="title" href="../index.html">OsloMet Campus</a></h4>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../topical-page/topical.html">Topical</a></li>
-            <li><a href="../campus-page/campus.html">Campus</a></li>
-            <li><a href="../accessibility-page/accessibility.html">Accessibility</a></li>
-          </ul>
         </div>
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../topical-page/topical.html">Topical</a></li>
+          <li><a href="../campus-page/campus.html">Campus</a></li>
+          <li>
+            <a href="../accessibility-page/accessibility.html">Accessibility</a>
+          </li>
+        </ul>
+        <div class="menu-bg" id="menu-bg"></div>
       </nav>
     </header>
-    <main>
+    <main class="mainview">
       <section class="Accessibility-topical">
         <article>
           <h2>Topical Pages Accessibility</h2>
@@ -35,6 +45,7 @@
 
         <figure>
           <img
+            class="images"
             src="../images/accessibility-Topical.jpg"
             alt="accessibility-Topical Page"
           />
@@ -42,5 +53,6 @@
         </figure>
       </section>
     </main>
-  </body>
+  </body>
 </html>
+
