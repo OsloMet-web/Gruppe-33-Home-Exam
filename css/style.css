@@ -155,9 +155,9 @@ flex container we prevent its growing, but let it shrink. */
   margin-bottom: 2rem;
 }
 
-main {
+/*main {
   /margin: 20px;  Ihtiyac var mi/
-}
+}*/
 
 footer {
   margin-top: 10px;
@@ -228,6 +228,26 @@ article > h1 {
 
 .side-info li {
   padding-bottom: 0.8em;
+}
+
+.accessibility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  gap: 1rem;
+  margin: 2em;
+  margin-top: 1em;
+  background-color: #fff;
+}
+
+.accessibility img {
+  width: 100%;
+  border: solid;
+  border-color: black;
+  border-width: medium;
 }
 
 /* For smaller screens we decrease the padding for the body, and increase the width for aside*/
@@ -462,7 +482,9 @@ header.hero h1,
 p {
   line-height: 2rem;
 }
-
+header.hero a:hover {
+  color: coral;
+}
 header.hero img {
   width: 100%;
   min-width: 300px;
@@ -479,12 +501,12 @@ header.hero .section-img {
 
 .button2 {
   background-color: var(--button-color);
-  color: white;
   cursor: pointer;
   opacity: 0.9;
   padding: 0.3rem;
   border-radius: 5px;
 }
+
 main .card {
   display: flex;
   align-items: center;
@@ -547,18 +569,4 @@ main .card:nth-child(even) {
   .campus-info > div {
     margin-bottom: 20px; /* Adds some space between each section */
   }
-
-  main .Accessibility-topical {
-    display: flex;
-    align-items: center;
-    border: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    padding: 1rem;
-    gap: 1rem;
-    margin: 2rem 0;
-  }
-
-  .Accessibility-topical img {
-    width: 600px;
-  }
 }

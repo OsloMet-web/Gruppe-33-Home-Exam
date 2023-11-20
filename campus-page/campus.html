@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- We specify the language of our page using the 'lang' attribute. -->
   <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- We give a title to the page -->
     <title>Campus Pilestredet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- We need to define charset to ensure proper rendering of the text content -->
+    <meta charset="UTF-8" />
+
+    <!-- We set the viewport to ensure our site is responsive to varius scrreen widths -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3.0, minimum-scale=0.8"
+    />
+
+    <!-- This is needed to ensure compatibility with old Internet Explorer browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- We describe the page content for search engine optimization purpose-->
+    <meta
+      name="description"
+      content="The page contains information about building number P35 of the Pilestredet campus of OsloMet University."
+    />
+
+    <!-- These tags are also needed for SEO optimization as well as to specify our authorship -->
+    <meta name="keywords" content="OsloMet Pilestredet P35" />
+    <meta name="author" content="Gruppe 33" />
+    <meta name="copyright" content="Gruppe 33" />
+    <meta name="robots" content="all" />
+
+    <!-- These are mainly same with above. But they are called Open Graph tags 
+      and needed to enhance the contents appearance on social media such as fadcebook -->
+    <meta property="og:title" content="Campus Pilestredet" />
+    <meta
+      property="og:description"
+      content="The page contains information about building number P35 of the Pilestredet campus of OsloMet University."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/campus.html" />
+    <meta property="og:locale" content="nb_NO" />
+    <meta property="og:image" content="/images/P35-1200.webp" />
+    <meta property="og:image:url" content="/images/P35-1200.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="900" />
+    <meta
+      property="og:image:alt"
+      content="OsloMet Pilestredet campus building P35."
+    />
+
+    <!-- We link an our CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
 
   <body class="body">
     <header>
+      <!-- This is responsive navigation bar -->
       <nav class="navbar">
+        <!-- This checkbox is needed to toggle burger menu. As a defult it is display property 
+       is set to none. So it is hidden from the view. Below, The <label> tag defines the 
+        label for several this checkbox element.x -->
         <input id="burger-menu-toggle" type="checkbox" />
 
         <div id="hamburger">
+          <!-- These are three lines for the icon of the hamburger menu 
+          We need to give differe3nt ids to each bars as we animate them differntly during 
+          transition upon click. First bar is rotated counterclockwise, second bar diappears slowly,
+          and third bar rotates in clockwise direction generating a close symbol. -->
+
+          <!-- The "for" attribute bounds this label to the checkbox above. We need it here, so when we click
+          on the lines it will toggle checkboxs state-->
           <label id="hamburger-lines" for="burger-menu-toggle">
             <div id="bar1" class="bar"></div>
             <div id="bar2" class="bar"></div>
             <div id="bar3" class="bar"></div>
           </label>
-          <h4><a class="title" href="../index.html">OsloMet Campus</a></h4>
+
+          <!-- Header that links to homepage -->
+          <h4><a class="title" href="/index.html">OsloMet Campus</a></h4>
         </div>
+
+        <!-- Here is the menu for site navigation -->
         <ul class="menu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../topical-page/topical.html">Topical</a></li>
-          <li><a href="../campus-page/campus.html">Campus</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/topical-page/topical.html">Topical</a></li>
+          <li><a href="/campus-page/campus.html">Campus</a></li>
           <li>
-            <a href="../accessibility-page/accessibility.html">Accessibility</a>
+            <a href="/accessibility-page/accessibility.html">Accessibility</a>
           </li>
         </ul>
         <div class="menu-bg" id="menu-bg"></div>
       </nav>
     </header>
 
+    <!-- This is the main content area -->
     <main class="mainview">
+      <!-- We structure content using articles -->
       <article>
+        <!-- Primary heading for article -->
         <h1>Campus Pilestredet</h1>
+
+        <!-- A summary paragraph for quick information -->
         <p class="summary">
           Ei rekkje av bygningane ligg i det tradisjonsrike Frydenlund-området
           ved Bislett. Der ein tidlegare kunne kjenne dufta av malt og humle frå
@@ -52,6 +117,8 @@
           som studentar og lærarar kan nytte seg av, også på fritida. Vi har
           også velferdslokale for studentar med blant anna ei kro.
         </p>
+
+        <!-- Citation for extrnal sources -->
         <div class="item-reference">
           Source:
           <a
@@ -61,15 +128,19 @@
           >
         </div>
       </article>
+
+      <!-- Responsive images for different screen sizes -->
       <picture>
-        <source media="(min-width: 800px)" srcset="../images/P35-1200.png" />
-        <source media="(min-width: 500px)" srcset="../images/P35-600.png" />
+        <source media="(min-width: 800px)" srcset="../images/P35-1200.webp" />
+        <source media="(min-width: 500px)" srcset="../images/P35-600.webp" />
         <img
           class="images"
-          src="../images/P35-400.png"
+          src="/images/P35-400.webp"
           alt="Oslomet pilestredet 35"
         />
       </picture>
+
+      <!-- To acknowledge the image source, we use the same class used above for text source-->
       <div class="item-reference">
         Photograph by:
         <a href="https://maps.app.goo.gl/aaMpUvDn7tkQdweY8" target="_blank"
@@ -86,6 +157,8 @@
           den norske hovedstad, er denne campus en dynamisk og pulserende hub
           for studerende, forskere og fagfolk.
         </p>
+
+        <!-- We include related information in an aside tag. This is not visible in reader modes.-->
         <aside class="side-info">
           <ul>
             <li>Er kjent for sitt banebrytende forskningsarbeid.</li>
@@ -126,6 +199,7 @@
       </article>
     </main>
 
+    <!-- Here is our footer with copyright info-->
     <footer>© 2023 Line 1 AS, Postboks 123, 0102 Oslo, Norge.</footer>
   </body>
 </html>
