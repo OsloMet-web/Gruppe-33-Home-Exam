@@ -25,10 +25,8 @@ greater than 992 => This is the default CSS.
   font-family: sans-serif;
 }
 
-body {
-  background-color: var(--white-color);
-}
 
+/* Styling for the footer */
 footer {
   margin-top: 10px;
   padding: 2rem var(--main-padding);
@@ -74,7 +72,6 @@ footer {
 .navbar li a:hover {
   background-color: var(--header-color);
   border-radius: 20px;
-  color: coral;
 }
 
 /* Styling for the title inside the navbar.*/
@@ -162,77 +159,75 @@ plus some extra to hide the left corners
 /*Styles  for home page*/
 
 
-/*Main content in home page with image*/
+/* Main layout structure for the content; using grid for flexible layouts */
 .content-wrapper {
   display: grid;
-  grid-template-columns: 2fr 1.5fr; /* İlk bölüm (metin) için mevcut alanın tamamını kullan, ikinci bölüm (resim) için 300px genişlik belirle */
-  gap: 40px; /* İki bölüm arasındaki boşluğu ayarlar */
+  grid-template-columns: 2fr 1.5fr;  /* Larger space for text, smaller for images */
+  gap: 40px; /* Spacing between grid items */
 }
 
+/* Styling for the main textual content area */
 .text-content {
   padding-top: 3rem;
   padding-left: 2rem;
   justify-content: center;
-  vertical-align: middle;
+  vertical-align: middle; /* Centers the text content vertically and horizontally */
+
 }
 
+/* Header styles within the text content area */
 .text-content h1 {
   color: var(--header-color);
   font-size: 2.5rem;
   margin-top: 2rem;
 }
 
+/* Paragraph styles within the text content area */
 .text-content p {
   font-size: 1rem;
   margin-top: 2rem;
 }
 
+/* Button styling */
 .home-button {
-  background-color: var(--button-color);
+  background-color:var(--header-color);
   padding: 1.5rem;
-  width: 7rem;
+  width: 11rem;
   border-radius: 10px;
 }
 
+/* Link styling within the button */
 .home-button a {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
+  width: 10rem;
 }
 
-.home-image img {
-  width: 50vw;
-  height: auto;
-  border-radius: 5px;
-}
 
 /*Campus section styles*/
 
+/* Section for additional campus information with a grid layout */
 .campus-info {
   min-height: 400px;
   margin: 3rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 eşit genişlikte sütun oluştur */
-  gap: 30px; /* Bloklar arasında 20px boşluk bırak */
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  gap: 30px; 
 }
 
-
-.campus-info h3 {
+/* Header styles within the campus info sections */
+.campus-info h2 {
   margin-bottom: 2rem;
-}
-
-.campus-info div {
-  background-color: var(--light-color); /* Hafif gri bir arka plan rengi */
-  padding: 2rem; /* İçerik ve blok kenarı arasında 20px boşluk */
-  border-radius: 5px; /* Blokların köşelerini yumuşat */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekleyerek derinlik kat */
-}
-
-.campus-info div h6 {
   color: var(--header-color);
-  font-size: larger;
-  margin-bottom: 2rem;
 }
 
+/* Article styles within the campus info*/
+.campus-info article {
+  background-color: var(--light-color); 
+  padding: 2rem;
+  border-radius: 5px; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
+}
 
 
 
@@ -409,7 +404,7 @@ article > h1 {
   gap: 1rem;
   margin: 2em;
   margin-top: 1em;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .accessibility img {
