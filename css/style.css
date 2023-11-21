@@ -238,10 +238,11 @@ plus some extra to hide the left corners
 }
 
 header.hero {
+  
   background-color:#FFCD4B;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem;  /* Sets the space between two sections */
   padding: 1rem;
   text-align: justify;
 }
@@ -256,7 +257,8 @@ header.hero h1 {
   color:#872341;
 
 }
-header.hero a:hover {
+ /* Hovering over the A tag targets the state and changes the text color. */
+header.hero a:hover {   
   color:#fff;
 }
 header.hero img {
@@ -307,9 +309,13 @@ main .card img {
   border-radius: 5px;
 }
 figcaption {
+  text-align: center;
+  padding: 0.5rem;
   font-style: italic;
   font-size: x-small;
 }
+
+/* It targets the cards in even rows of cards on the page and applies a special order to them. */
 main .card:nth-child(even) {
   flex-direction: row-reverse;
 }
