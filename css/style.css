@@ -45,6 +45,13 @@ footer {
   justify-content: flex-end;
 }
 
+.navbar-logo {
+  height: 50px; /* Adjust the height as needed */
+  margin-right: 10px; /* Space between the logo and the title */
+  vertical-align: middle; /* Aligns the logo with the text */
+}
+
+
 .navbar ul {
   list-style-type: none;
   display: flex;
@@ -227,21 +234,23 @@ plus some extra to hide the left corners
 }
 
 header.hero {
-  background-color: #ffcd4b;
+  background-color: #C5E898;
   display: flex;
   align-items: center;
   gap: 1rem; /* Sets the space between two sections */
   padding: 1rem;
   text-align: justify;
+  border-radius: 10px;
 }
 
 header.hero h1,
 p {
   line-height: 2rem;
+
 }
 
 header.hero h1 {
-  color: #872341;
+  color: #0766AD;
 }
 /* Hovering over the A tag targets the state and changes the text color. */
 header.hero a:hover {
@@ -262,18 +271,20 @@ header.hero .section-img {
 }
 
 .button2 {
-  background-color: #fa7070;
+  background-color:#0766AD;
   cursor: pointer;
   opacity: 0.9;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 5px;
   border: none;
+  margin-top: 1rem;
 }
 
 .button2 a {
   text-decoration: none;
-  color: #000;
   font-weight: 500;
+  color: var(--white-color);
+
 }
 
 main .card {
