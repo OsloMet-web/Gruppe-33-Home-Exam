@@ -189,6 +189,12 @@ plus some extra to hide the left corners
   width: 10rem;
 }
 
+.accessibility-header{
+  text-align: center;
+  color:var(--header-color);
+  margin: 2rem;
+}
+
 /*Campus section styles*/
 
 /* Section for additional campus information with a grid layout */
@@ -298,34 +304,6 @@ figcaption {
 /* It targets the cards in even rows of cards on the page and applies a special order to them. */
 main .card:nth-child(even) {
   flex-direction: row-reverse;
-}
-
-/* 
-.article-link{
-  text-decoration: none;
-  color:#414141;
-} */
-
-/* Accessibility page styles */
-
-.accessibility {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  gap: 1rem;
-  margin: 2em;
-  margin-top: 1em;
-  background-color: var(--white-color);
-}
-
-.accessibility img {
-  width: 100%;
-  border: solid;
-  border-color: black;
-  border-width: medium;
 }
 
 /* Media Query Controls */
