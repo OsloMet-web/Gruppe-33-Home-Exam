@@ -198,10 +198,10 @@ plus some extra to hide the left corners
   margin: 2rem;
 }
 
-/*Campus section styles*/
+/*Info section styles*/
 
-/* Section for additional campus information with a grid layout */
-.campus-info {
+/* Section for additional information with a grid layout */
+.info-section {
   min-height: 400px;
   margin: 3rem;
   display: grid;
@@ -209,14 +209,14 @@ plus some extra to hide the left corners
   gap: 30px;
 }
 
-/* Header styles within the campus info sections */
-.campus-info h2 {
+/* Header styles within the info sections */
+.info-section h2 {
   margin-bottom: 2rem;
   color: var(--semi-dark-teal);
 }
 
-/* Article styles within the campus info*/
-.campus-info article {
+/* Article styles within the info section*/
+.info-section article {
   background-color:var(--light-teal);
   padding: 2rem;
   border-radius: 5px;
@@ -229,6 +229,7 @@ plus some extra to hide the left corners
   margin: 2rem auto;
 }
 
+/* sadece .hero olmali mi*/
 header.hero {
   background-color: #C5E898;
   display: flex;
@@ -310,7 +311,6 @@ figcaption {
 /* It targets the cards in even rows of cards on the page and applies a special order to them. */
 .card:nth-child(even) {
   flex-direction: row-reverse;
-  background-color: #C5E898;
 }
 
 
@@ -334,13 +334,13 @@ figcaption {
     width: 100%; /* Make the image full width */
   }
 
-  .campus-info {
+  .info-section {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .campus-info > div {
+  .info-section > div {
     margin-bottom: 20px; /* Adds some space between each section */
   }
 }
