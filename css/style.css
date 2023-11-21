@@ -25,9 +25,16 @@ greater than 992 => This is the default CSS.
   font-family: sans-serif;
 }
 
-body {
-  background-color: var(--white-color);
+
+/* Styling for the footer */
+footer {
+  margin-top: 10px;
+  padding: 2rem var(--main-padding);
+  background-color: var(--button-color);
+  text-align: center;
 }
+
+
 
 /* Styling for the navigation bar */
 .navbar {
@@ -39,23 +46,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-}
-
-/* Style for the title container. This is the first element of the 
-flex container we prevent its growing, but let it shrink. */
-#hamburger {
-  flex-grow: 0;
-  flex-shrink: 1;
-  width: 100%;
-}
-
-/* Styling for the title inside the navbar.*/
-.title {
-  color: var(--white-color);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: x-large;
-  text-align: left;
 }
 
 .navbar ul {
@@ -82,94 +72,264 @@ flex container we prevent its growing, but let it shrink. */
 .navbar li a:hover {
   background-color: var(--header-color);
   border-radius: 20px;
-  color: coral;
 }
 
-.campus-info {
-  min-height: 400px;
-}
-
-.image-content img {
-  width: 50vw; /* Resmin bölümün genişliğini aşmamasını sağlar */
-  height: auto;
-  border-radius: 5px;
-}
-
-.content-wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1.5fr; /* İlk bölüm (metin) için mevcut alanın tamamını kullan, ikinci bölüm (resim) için 300px genişlik belirle */
-  gap: 40px; /* İki bölüm arasındaki boşluğu ayarlar */
-}
-
-.text-content {
-  padding-top: 3rem;
-  padding-left: 2rem;
-  justify-content: center;
-  vertical-align: middle;
-}
-
-.text-content h1 {
-  color: var(--header-color);
-  font-size: 2.5rem;
-  margin-top: 2rem;
-}
-
-.text-content p {
-  font-size: 1rem;
-  margin-top: 2rem;
-}
-
-.button {
-  background-color: var(--button-color);
-  padding: 1.5rem;
-  width: 7rem;
-  border-radius: 10px;
-}
-
-.button a {
+/* Styling for the title inside the navbar.*/
+.title {
+  color: var(--white-color);
   text-decoration: none;
-  color: white;
+  font-weight: 600;
+  font-size: x-large;
+  text-align: left;
 }
 
-.campus-info {
-  margin: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 eşit genişlikte sütun oluştur */
-  gap: 30px; /* Bloklar arasında 20px boşluk bırak */
-}
 
-.campus-info h3 {
-  margin-bottom: 2rem;
-}
 
-.campus-info div {
-  background-color: var(--light-color); /* Hafif gri bir arka plan rengi */
-  padding: 2rem; /* İçerik ve blok kenarı arasında 20px boşluk */
-  border-radius: 5px; /* Blokların köşelerini yumuşat */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekleyerek derinlik kat */
-}
-
-.campus-info div h6 {
-  color: var(--header-color);
-  font-size: larger;
-  margin-bottom: 2rem;
-}
-
-/*main {
-  /margin: 20px;  Ihtiyac var mi/
-}*/
-
-footer {
-  margin-top: 10px;
-  padding: 2rem var(--main-padding);
-  background-color: var(--button-color);
-  text-align: center;
+/* Style for the title container. This is the first element of the 
+flex container we prevent its growing, but let it shrink. */
+#hamburger {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
 }
 
 /* Hides the checkbox for the burger menu*/
 #burger-menu-toggle {
   display: none;
 }
+
+ /* Moves the first bar up by 4 pixels to increase the distance between bars*/
+ #bar1 {
+  transform: translateY(-4px);
+}
+
+/* Moves the bar up by 4 pixels to increase the distance between bars */
+#bar3 {
+  transform: translateY(4px);
+}
+
+/* When the burger menu is checked we change the color of the bars to white 
+as we will have red backgrousn and we hide the second bar thorugh setting opacity   */
+
+#burger-menu-toggle:checked + div label .bar {
+  background-color: white;
+}
+
+#burger-menu-toggle:checked + div label #bar2 {
+  opacity: 0;
+}
+
+/* We move first bar 4px down in Y axes and rotate it 45 degrees counter clockwise */
+#burger-menu-toggle:checked + div label #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+/* We move third bar 6px up in Y axes and rotate it 45 degrees clockwise */
+#burger-menu-toggle:checked + div label #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+#burger-menu-toggle:checked ~ .menu {
+  display: block;
+  width: 10em;
+}
+
+/* We set the height of the menu items to make them visible, 
+in unchecked state they were set to 0 to hide them, see below*/
+#burger-menu-toggle:checked ~ .menu li {
+  height: 50px;
+  width: auto;
+}
+
+/* This is the background for the menu. We set its height in pixels 
+based on the number of list elements in the menu 4 X 50  + height of title 
+translate states how much it should move in in X an Y directions
+In X direction -50 px would move it to top as our navbar height is 100px
+In Y direction it depends on the main padding + half width of the bars + 
+plus some extra to hide the left corners
+*/
+#burger-menu-toggle:checked ~ .menu-bg {
+  width: 17em;
+  height: 300px;
+  transform: translate(calc(-1 * var(--main-padding) - 1.5em - 50px), -50px);
+  z-index: -3;
+}
+
+
+
+/*Styles  for home page*/
+
+
+/* Main layout structure for the content; using grid for flexible layouts */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;  /* Larger space for text, smaller for images */
+  gap: 40px; /* Spacing between grid items */
+}
+
+/* Styling for the main textual content area */
+.text-content {
+  padding-top: 3rem;
+  padding-left: 2rem;
+  justify-content: center;
+  vertical-align: middle; /* Centers the text content vertically and horizontally */
+
+}
+
+/* Header styles within the text content area */
+.text-content h1 {
+  color: var(--header-color);
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* Paragraph styles within the text content area */
+.text-content p {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Button styling */
+.home-button {
+  background-color:var(--header-color);
+  padding: 1.5rem;
+  width: 11rem;
+  border-radius: 10px;
+}
+
+/* Link styling within the button */
+.home-button a {
+  text-decoration: none;
+  color: var(--white-color);
+  width: 10rem;
+}
+
+
+/*Campus section styles*/
+
+/* Section for additional campus information with a grid layout */
+.campus-info {
+  min-height: 400px;
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  gap: 30px; 
+}
+
+/* Header styles within the campus info sections */
+.campus-info h2 {
+  margin-bottom: 2rem;
+  color: var(--header-color);
+}
+
+/* Article styles within the campus info*/
+.campus-info article {
+  background-color: var(--light-color); 
+  padding: 2rem;
+  border-radius: 5px; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
+}
+
+
+
+/* Topical page styles */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+header.hero {
+  
+  background-color:#FFCD4B;
+  display: flex;
+  align-items: center;
+  gap: 1rem;  /* Sets the space between two sections */
+  padding: 1rem;
+  text-align: justify;
+}
+
+header.hero h1,
+p {
+  line-height: 2rem;
+
+}
+
+header.hero h1 {
+  color:#872341;
+
+}
+ /* Hovering over the A tag targets the state and changes the text color. */
+header.hero a:hover {   
+  color:#fff;
+}
+header.hero img {
+  width: 100%;
+  min-width: 300px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+header.hero .section-text {
+  flex: 1.9;
+}
+
+header.hero .section-img {
+  flex: 1;
+}
+
+.button2 {
+  background-color: #FA7070;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.button2 a{
+  text-decoration: none;
+  color:#000;
+  font-weight: 500;
+}
+
+main .card {
+  display: flex;
+  align-items: center;
+  border: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+main .card article {
+  flex: 1;
+}
+
+main .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+figcaption {
+  text-align: center;
+  padding: 0.5rem;
+  font-style: italic;
+  font-size: x-small;
+}
+
+/* It targets the cards in even rows of cards on the page and applies a special order to them. */
+main .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 
+.article-link{
+  text-decoration: none;
+  color:#414141;
+} */
+
+
+
+
+/* Campus page styles */
 
 /* This sets the style for main body . It adds margins to both sides*/
 .mainview {
@@ -230,6 +390,10 @@ article > h1 {
   padding-bottom: 0.8em;
 }
 
+
+
+/* Accessibility page styles */
+
 .accessibility {
   display: flex;
   flex-direction: column;
@@ -240,7 +404,7 @@ article > h1 {
   gap: 1rem;
   margin: 2em;
   margin-top: 1em;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .accessibility img {
@@ -250,16 +414,8 @@ article > h1 {
   border-width: medium;
 }
 
-/* For smaller screens we decrease the padding for the body, and increase the width for aside*/
-@media (max-width: 992px) {
-  :root {
-    --main-padding: 12vw;
-  }
+/* Media Query Controls */
 
-  .side-info {
-    width: 32vw;
-  }
-}
 
 /* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
 @media (max-width: 768px) {
@@ -269,6 +425,39 @@ article > h1 {
 
   .side-info {
     width: 40vw;
+  }
+
+  header.hero {
+    flex-direction: column;
+  }
+  .image-content {
+    flex-direction: column;
+  }
+
+  main .card {
+    flex-direction: column;
+  }
+
+  main .card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr; /* Use only one column */
+  }
+
+  .image-content img {
+    width: 100%; /* Make the image full width */
+  }
+
+  .campus-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campus-info > div {
+    margin-bottom: 20px; /* Adds some space between each section */
   }
 }
 
@@ -342,61 +531,6 @@ article > h1 {
     display: grid;
   }
 
-  /* Moves the first bar up by 4 pixels to increase the distance between bars*/
-  #bar1 {
-    transform: translateY(-4px);
-  }
-
-  /* Moves the bar up by 4 pixels to increase the distance between bars */
-  #bar3 {
-    transform: translateY(4px);
-  }
-
-  /* When the burger menu is checked we change the color of the bars to white 
-  as we will have red backgrousn and we hide the second bar thorugh setting opacity   */
-
-  #burger-menu-toggle:checked + div label .bar {
-    background-color: white;
-  }
-
-  #burger-menu-toggle:checked + div label #bar2 {
-    opacity: 0;
-  }
-
-  /* We move first bar 4px down in Y axes and rotate it 45 degrees counter clockwise */
-  #burger-menu-toggle:checked + div label #bar1 {
-    transform: translateY(4px) rotateZ(-45deg);
-  }
-  /* We move third bar 6px up in Y axes and rotate it 45 degrees clockwise */
-  #burger-menu-toggle:checked + div label #bar3 {
-    transform: translateY(-6px) rotateZ(45deg);
-  }
-
-  #burger-menu-toggle:checked ~ .menu {
-    display: block;
-    width: 10em;
-  }
-
-  /* We set the height of the menu items to make them visible, 
-  in unchecked state they were set to 0 to hide them, see below*/
-  #burger-menu-toggle:checked ~ .menu li {
-    height: 50px;
-    width: auto;
-  }
-
-  /* This is the background for the menu. We set its height in pixels 
-  based on the number of list elements in the menu 4 X 50  + height of title 
-  translate states how much it should move in in X an Y directions
-  In X direction -50 px would move it to top as our navbar height is 100px
-  In Y direction it depends on the main padding + half width of the bars + 
-  plus some extra to hide the left corners
-  */
-  #burger-menu-toggle:checked ~ .menu-bg {
-    width: 17em;
-    height: 300px;
-    transform: translate(calc(-1 * var(--main-padding) - 1.5em - 50px), -50px);
-    z-index: -3;
-  }
   /* Menu and Menu Items */
 
   /* We hide the menu when hamburger menu is not active*/
@@ -463,110 +597,14 @@ article > h1 {
   }
 }
 
-/* From Bahar */
-.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-}
 
-header.hero {
-  background-color: aliceblue;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  text-align: justify;
-}
-
-header.hero h1,
-p {
-  line-height: 2rem;
-}
-header.hero a:hover {
-  color: coral;
-}
-header.hero img {
-  width: 100%;
-  min-width: 300px;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-header.hero .section-text {
-  flex: 1.9;
-}
-
-header.hero .section-img {
-  flex: 1;
-}
-
-.button2 {
-  background-color: var(--button-color);
-  cursor: pointer;
-  opacity: 0.9;
-  padding: 0.3rem;
-  border-radius: 5px;
-}
-
-main .card {
-  display: flex;
-  align-items: center;
-  border: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-main .card article {
-  flex: 1;
-}
-
-main .card img {
-  width: 100%;
-  border-radius: 5px;
-}
-figcaption {
-  font-style: italic;
-  font-size: x-small;
-}
-main .card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-/* These rules come into play when the screen width is less than 700 pixels.
-*/
-
-@media (max-width: 700px) {
-  header.hero {
-    flex-direction: column;
-  }
-  .image-content {
-    flex-direction: column;
+/* For smaller screens we decrease the padding for the body, and increase the width for aside*/
+@media (max-width: 992px) {
+  :root {
+    --main-padding: 12vw;
   }
 
-  main .card {
-    flex-direction: column;
-  }
-
-  main .card:nth-child(even) {
-    flex-direction: column;
-  }
-
-  .content-wrapper {
-    grid-template-columns: 1fr; /* Use only one column */
-  }
-
-  .image-content img {
-    width: 100%; /* Make the image full width */
-  }
-
-  .campus-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .campus-info > div {
-    margin-bottom: 20px; /* Adds some space between each section */
+  .side-info {
+    width: 32vw;
   }
 }
