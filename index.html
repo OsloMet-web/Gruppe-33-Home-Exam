@@ -1,123 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Meta tags for responsiveness and character set -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO meta tags -->
-  <meta name="keywords" content="OsloMet, University, Campus, Oslo, Education" />
-  
-  <!-- Stylesheet link-->
-  <link rel="stylesheet" href="./css/style.css" />
-  
-  <!-- Title of the webpage -->
-  <title>OsloMet Campus</title>
-</head>
-<body>
+  <head>
+    <!-- Meta tags for responsiveness and character set -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Navigation bar for the site -->
-  <header>
-    <nav class="navbar">
-      <!-- Toggle for mobile menu -->
-      <input id="burger-menu-toggle" type="checkbox" />
+    <!-- SEO meta tags -->
+    <meta
+      name="keywords"
+      content="OsloMet, University, Campus, Oslo, Education"
+    />
 
-      <!-- Hamburger menu for mobile -->
-      <div id="hamburger">
-        <label id="hamburger-lines" for="burger-menu-toggle">
-          <span id="bar1" class="bar"></span>
-          <span id="bar2" class="bar"></span>
-          <span id="bar3" class="bar"></span>
-        </label>
-        <!-- Title of the web page -->
-        <p><a class="title" href="./index.html">OsloMet Campus</a></p>
+    <!-- Stylesheet link-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Title of the webpage -->
+    <title>OsloMet Campus</title>
+  </head>
+  <body>
+    <!-- Navigation bar for the site -->
+    <header>
+      <nav class="navbar">
+        <!-- Toggle for mobile menu -->
+        <input id="burger-menu-toggle" type="checkbox" />
+
+        <!-- Hamburger menu for mobile -->
+        <div id="hamburger">
+          <label id="hamburger-lines" for="burger-menu-toggle">
+            <span id="bar1" class="bar"></span>
+            <span id="bar2" class="bar"></span>
+            <span id="bar3" class="bar"></span>
+          </label>
+          <!-- Title of the web page -->
+          <p><a class="title" href="./index.html">OsloMet Campus</a></p>
+        </div>
+
+        <!-- Navbar menu items -->
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./topical.html">Topical</a></li>
+          <li><a href="./campus.html">Campus</a></li>
+          <li><a href="./campus2.html">Campus2</a></li>
+          <li><a href="./accessibility.html">Accessibility</a></li>
+        </ul>
+
+        <!-- Background for the navbar menu -->
+        <div class="menu-bg"></div>
+      </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main class="main">
+      <div class="content-wrapper">
+        <!-- Introduction text content -->
+        <div class="text-content">
+          <h1>Welcome to OsloMet Campus</h1>
+          <p>
+            OsloMet - Oslo Metropolitan University, located in the heart of
+            Oslo, Norway, is a vibrant hub of academic activity and student
+            life.
+          </p>
+          <p>
+            Known for its dynamic campus environment, OsloMet offers a wide
+            range of study programs and research opportunities, making it one of
+            the leading universities in the region.
+          </p>
+
+          <!-- Call to action button -->
+          <p class="home-button">
+            <a href="./campus-page/campus.html">Explore Campus</a>
+          </p>
+        </div>
+
+        <!-- Campus image with descriptive alt text for accessibility -->
+
+        <figure>
+          <img
+            src="./images/oslomet-campus.jpg"
+            alt="OsloMet Campus Image"
+            width="800"
+            height="500"
+          />
+          <figcaption>Foto: Skjalg Bøhmer Vold / OsloMet</figcaption>
+        </figure>
       </div>
-      
-      <!-- Navbar menu items -->
-      <ul class="menu">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./topical.html">Topical</a></li>
-        <li><a href="./campus.html">Campus</a></li>
-        <li><a href="./accessibility.html">Accessibility</a></li>
-      </ul>
-      
-      <!-- Background for the navbar menu -->
-      <div class="menu-bg"></div>
-    </nav>
-  </header>
 
-  <!-- Main content section -->
-  <main class="main">
-    <div class="content-wrapper">
-      
-      <!-- Introduction text content -->
-      <div class="text-content">
-        <h1>Welcome to OsloMet Campus</h1>
-        <p>
-          OsloMet - Oslo Metropolitan University, located in the heart of
-          Oslo, Norway, is a vibrant hub of academic activity and student
-          life.
-        </p>
-        <p>
-          Known for its dynamic campus environment, OsloMet offers a wide
-          range of study programs and research opportunities, making it one of
-          the leading universities in the region.
-        </p>
+      <!-- Additional campus information -->
+      <section class="campus-info">
+        <!-- Pilestredet 35 building info -->
+        <article>
+          <h2>Pilestredet 35</h2>
+          <p>
+            Pilestredet 35, a notable building on the OsloMet campus, is a hub
+            for student services and administrative offices. This building also
+            houses several academic departments, offering students a centralized
+            location for many of their needs.
+          </p>
+        </article>
 
-        <!-- Call to action button -->
-        <p class="home-button"><a href="./campus-page/campus.html">Explore Campus</a></p>
-      </div>
+        <!-- Student life and facilities info -->
+        <article>
+          <h2>Student Life and Facilities</h2>
+          <p>
+            The campus is bustling with student activities, clubs, and
+            organizations, making it an exciting place for personal growth and
+            social engagement. Facilities such as modern libraries, study areas,
+            and computer labs support students in their academic pursuits.
+          </p>
+        </article>
 
-      <!-- Campus image with descriptive alt text for accessibility -->
+        <!-- Green and sustainable campus info -->
+        <article>
+          <h2>Green and Sustainable Campus</h2>
+          <p>
+            OsloMet is committed to sustainability and has implemented various
+            green initiatives. These include energy-efficient buildings, waste
+            reduction programs, and encouraging sustainable transportation
+            methods for students and staff.
+          </p>
+        </article>
+      </section>
+    </main>
 
-      <figure>
-        <img src="./images/oslomet-campus-l.jpg" alt="OsloMet Campus Image" width="600" height="400">
-        <figcaption>Foto: Skjalg Bøhmer Vold / OsloMet</figcaption>
-      </figure>
-      
-    </div>
-    
-    <!-- Additional campus information -->
-    <section class="campus-info">
-      <!-- Pilestredet 35 building info -->
-      <article>
-        <h2>Pilestredet 35</h2>
-        <p>
-          Pilestredet 35, a notable building on the OsloMet campus, is a hub
-          for student services and administrative offices. This building also
-          houses several academic departments, offering students a centralized
-          location for many of their needs.
-        </p>
-      </article>
-
-      <!-- Student life and facilities info -->
-      <article>
-        <h2>Student Life and Facilities</h2>
-        <p>
-          The campus is bustling with student activities, clubs, and
-          organizations, making it an exciting place for personal growth and
-          social engagement. Facilities such as modern libraries, study areas,
-          and computer labs support students in their academic pursuits.
-        </p>
-      </article>
-
-      <!-- Green and sustainable campus info -->
-      <article>
-        <h2>Green and Sustainable Campus</h2>
-        <p>
-          OsloMet is committed to sustainability and has implemented various
-          green initiatives. These include energy-efficient buildings, waste
-          reduction programs, and encouraging sustainable transportation
-          methods for students and staff.
-        </p>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer with copyright information -->
-  <footer>
-    © 2023 Line 1 AS, Postboks 123, 0102 Oslo, Norway.
-  </footer>
-</body>
+    <!-- Footer with copyright information -->
+    <footer>© 2023 Line 1 AS, Postboks 123, 0102 Oslo, Norway.</footer>
+  </body>
 </html>

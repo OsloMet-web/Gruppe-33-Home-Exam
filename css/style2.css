@@ -1,0 +1,596 @@
+/*
+We followed the rules for responsive layout. 4 different styles are applied with following width breaks.
+max-width 576 => For small screens such as mobile phones. We created a Hamburger menu for this size.
+max-width 768 => Small screens such as tablet PCs.
+max-width 992 => Mid size screens.
+greater than 992 => This is the default CSS.
+
+*/
+
+/* We define the common variables */
+:root {
+    --main-padding: 15vw;
+    --dark-color: #023535;
+    --header-color: #015958;
+    --button-color: #008f8c;
+    --light-color: #c7ffed;
+    --white-color: #fff;
+  }
+  
+  /* Global CSS adjustments */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  /* Styling for the footer */
+  footer {
+    margin-top: 10px;
+    padding: 2rem var(--main-padding);
+    background-color: var(--button-color);
+    text-align: center;
+  }
+  
+  /* Styling for the navigation bar */
+  .navbar {
+    padding: 1rem var(--main-padding);
+    background-color: var(--dark-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px; /* The gap between menu elements. */
+  }
+  
+  /* Transitions sets the animation between normal vs hovered */
+  .navbar li a {
+    display: block;
+    color: var(--white-color);
+    text-align: center;
+    padding: 12px 16px;
+    transition: background-color 0.3s ease-in-out;
+    transition: border-radius 0.7s ease;
+    transition: color 0.8s ease;
+    text-decoration: none;
+  }
+  
+  /* Hovering with mouse would change background color and border */
+  .navbar li a:hover {
+    background-color: var(--header-color);
+    border-radius: 20px;
+  }
+  
+  /* Styling for the title inside the navbar.*/
+  .title {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: x-large;
+    text-align: left;
+  }
+  
+  /* Style for the title container. This is the first element of the 
+  flex container we prevent its growing, but let it shrink. */
+  #hamburger {
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 100%;
+  }
+  
+  /* Hides the checkbox for the burger menu*/
+  #burger-menu-toggle {
+    display: none;
+  }
+  
+  /* Moves the first bar up by 4 pixels to increase the distance between bars*/
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  /* Moves the bar up by 4 pixels to increase the distance between bars */
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+  /* When the burger menu is checked we change the color of the bars to white 
+  as we will have red backgrousn and we hide the second bar thorugh setting opacity   */
+  
+  #burger-menu-toggle:checked + div label .bar {
+    background-color: white;
+  }
+  
+  #burger-menu-toggle:checked + div label #bar2 {
+    opacity: 0;
+  }
+  
+  /* We move first bar 4px down in Y axes and rotate it 45 degrees counter clockwise */
+  #burger-menu-toggle:checked + div label #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  /* We move third bar 6px up in Y axes and rotate it 45 degrees clockwise */
+  #burger-menu-toggle:checked + div label #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+  #burger-menu-toggle:checked ~ .menu {
+    display: block;
+    width: 10em;
+  }
+  
+  /* We set the height of the menu items to make them visible, 
+  in unchecked state they were set to 0 to hide them, see below*/
+  #burger-menu-toggle:checked ~ .menu li {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* This is the background for the menu. We set its height in pixels 
+  based on the number of list elements in the menu 4 X 50  + height of title 
+  translate states how much it should move in in X an Y directions
+  In X direction -50 px would move it to top as our navbar height is 100px
+  In Y direction it depends on the main padding + half width of the bars + 
+  plus some extra to hide the left corners
+  */
+  #burger-menu-toggle:checked ~ .menu-bg {
+    width: 17em;
+    height: 300px;
+    transform: translate(calc(-1 * var(--main-padding) - 1.5em - 50px), -50px);
+    z-index: -3;
+  }
+  
+  /*Styles  for home page*/
+  
+  /* Main layout structure for the content; using grid for flexible layouts */
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr; /* Larger space for text, smaller for images */
+    gap: 40px; /* Spacing between grid items */
+  }
+  
+  /* Styling for the main textual content area */
+  .text-content {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    justify-content: center;
+    vertical-align: middle; /* Centers the text content vertically and horizontally */
+  }
+  
+  /* Header styles within the text content area */
+  .text-content h1 {
+    color: var(--header-color);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Paragraph styles within the text content area */
+  .text-content p {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Button styling */
+  .home-button {
+    background-color: var(--header-color);
+    padding: 1.5rem;
+    width: 11rem;
+    border-radius: 10px;
+  }
+  
+  /* Link styling within the button */
+  .home-button a {
+    text-decoration: none;
+    color: var(--white-color);
+    width: 10rem;
+  }
+  
+  /*Campus section styles*/
+  
+  /* Section for additional campus information with a grid layout */
+  .campus-info {
+    min-height: 400px;
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 30px;
+  }
+  
+  /* Header styles within the campus info sections */
+  .campus-info h2 {
+    margin-bottom: 2rem;
+    color: var(--header-color);
+  }
+  
+  /* Article styles within the campus info*/
+  .campus-info article {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
+  }
+  
+  /* Topical page styles */
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  header.hero {
+    background-color: #ffcd4b;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Sets the space between two sections */
+    padding: 1rem;
+    text-align: justify;
+  }
+  
+  header.hero h1,
+  p {
+    line-height: 2rem;
+  }
+  
+  header.hero h1 {
+    color: #872341;
+  }
+  /* Hovering over the A tag targets the state and changes the text color. */
+  header.hero a:hover {
+    color: #fff;
+  }
+  header.hero img {
+    width: 100%;
+    min-width: 300px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+  header.hero .section-text {
+    flex: 1.9;
+  }
+  
+  header.hero .section-img {
+    flex: 1;
+  }
+  
+  .button2 {
+    background-color: #fa7070;
+    cursor: pointer;
+    opacity: 0.9;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .button2 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  main .card {
+    display: flex;
+    align-items: center;
+    border: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  main .card article {
+    flex: 1;
+  }
+  
+  main .card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  figcaption {
+    text-align: center;
+    padding: 0.5rem;
+    font-style: italic;
+    font-size: x-small;
+  }
+  
+  /* It targets the cards in even rows of cards on the page and applies a special order to them. */
+  main .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  /* 
+  .article-link{
+    text-decoration: none;
+    color:#414141;
+  } */
+  
+  /* Campus page styles */
+  
+  /* This sets the style for main body . It adds margins to both sides*/
+  .mainview {
+    margin-left: var(--main-padding);
+    margin-right: var(--main-padding);
+    width: calc(100% - 2 * var(--main-padding));
+    background-color: var(--light-color);
+    padding: 1em;
+  }
+
+  /* Style for reference items eg photos or texts  
+ */
+.item-reference {
+    background-color: var(--light-color);
+    margin-bottom: 1.5em;
+    /* background-color:antiquewhite; */
+  }
+  
+  
+  .images {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Styles pharagraphs inside the articles */
+  article > p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  /* Styles h1 elements inside the articles */
+  article > h1 {
+    margin-bottom: 1em;
+  }
+  
+  /* Styles summary paragraphs*/
+  .summary {
+    font-weight: 800;
+    color: rgb(43, 41, 41);
+  }
+  
+  /* Styles extra information "aside"*/
+  .side-info {
+    float: right;
+    width: 25vw;
+    background-color: rgb(247, 249, 243);
+    margin: 1em;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 1em;
+    padding-left: 2em;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 16px;
+    border: 4px solid var(--button-color);
+  }
+  
+  .side-info li {
+    padding-bottom: 0.8em;
+  }
+  
+  /* Accessibility page styles */
+  
+  .accessibility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    gap: 1rem;
+    margin: 2em;
+    margin-top: 1em;
+    background-color: var(--white-color);
+  }
+  
+  .accessibility img {
+    width: 100%;
+    border: solid;
+    border-color: black;
+    border-width: medium;
+  }
+  
+  /* Media Query Controls */
+  
+  /* For smaller screens we decrease the padding for the body, and increase the width for aside*/
+  @media (max-width: 992px) {
+    :root {
+      --main-padding: 12vw;
+    }
+  
+    .side-info {
+      width: 32vw;
+    }
+  }
+  
+  /* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
+  @media (max-width: 768px) {
+    :root {
+      --main-padding: 8vw;
+    }
+  
+    .side-info {
+      width: 40vw;
+    }
+  
+    header.hero {
+      flex-direction: column;
+    }
+    .image-content {
+      flex-direction: column;
+    }
+  
+    main .card {
+      flex-direction: column;
+    }
+  
+    main .card:nth-child(even) {
+      flex-direction: column;
+    }
+  
+    .content-wrapper {
+      grid-template-columns: 1fr; /* Use only one column */
+    }
+  
+    .image-content img {
+      width: 100%; /* Make the image full width */
+    }
+  
+    .campus-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .campus-info > div {
+      margin-bottom: 20px; /* Adds some space between each section */
+    }
+  }
+  
+  /* At mobile phone size, we decrease the padding for the body further, and ilet the aside have full width*/
+  @media (max-width: 576px) {
+    :root {
+      --main-padding: 5vw;
+    }
+  
+    /* When the screen is smaller we have a higher navbar we need to have more padding for main view */
+    .container,
+    .main,
+    .mainview {
+      padding-top: 105px;
+    }
+  
+    .text-content {
+      padding-top: 0;
+    }
+  
+    /* Side Info */
+    .side-info {
+      float: none;
+      width: auto;
+      margin-left: 0;
+      margin-top: 1em;
+    }
+  
+    /* Navbar and Hamburger Menu styles */
+    /* We got the idea of Hamburger from the lecture slides and
+    from following web page. But the Hamburger menu in here was using Javascript
+    We removed the JS dependency and controlled style behaviour via CSS
+    https://alvarotrigo.com/blog/hamburger-menu-css/
+    */
+  
+    /* We change flex style to column, and move and align elements to top left 
+    Bring it to in front of the body section by setting Z index
+    */
+    .navbar {
+      z-index: 1;
+      height: 100px;
+      width: 100vw;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    #hamburger {
+      display: flex;
+      align-items: center;
+    }
+  
+    /* Settings for the horizantal lines for Hamburger Menu */
+    #hamburger-lines {
+      align-content: center;
+      display: grid;
+      width: 45px;
+      height: 40px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  
+    /* Bar styles */
+    .bar {
+      height: 5px;
+      width: 3em;
+      background-color: #dc052d;
+      border-radius: 5px;
+      transition-timing-function: ease; /* Transition timing, in terms of change inthe animation speed during animation*/
+      transition-duration: 0.3s; /* Transition  duration for animation */
+      margin-bottom: 0.2em;
+    }
+  
+    /* When the screen is small we want "OsloMet Campus" title to be double line */
+    .title {
+      width: 100px;
+      display: grid;
+    }
+  
+    /* Menu and Menu Items */
+  
+    /* We hide the menu when hamburger menu is not active*/
+    .menu {
+      transition: 0.3s ease;
+      float: right;
+    }
+  
+    /* We hide the menu items when hamburger menu is not active*/
+    .menu li {
+      list-style: none;
+      padding: 4px 0;
+      height: 0px;
+      overflow: hidden;
+    }
+  
+    .menu li a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  
+    .menu li a:hover {
+      background-color: rgba(240, 13, 13, 0.2);
+  
+      border-radius: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  
+    /* Menu Background */
+  
+    .navbar {
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  
+    /* Styles of the red menu background
+    It is hidden in the begining but still its location was set to
+    exact location of the center of hamburger lines to ensure that during animation
+    it gives an effect as if it is coming from there. That location is calculated based on 
+    height of navbar/2 = 50px and in X axes, main padding + 1.5em (length of the bars/2) 
+    for the glossy effect we got the idea from 
+    https://dev.to/chinmaymhatre/create-a-glass-ui-using-only-two-css-properties-3k9h
+    */
+  
+    .menu-bg {
+      top: 50px;
+      left: calc(var(--main-padding) + 1.5em);
+      z-index: 1;
+      width: 0;
+      height: 0;
+      /* background: radial-gradient(circle, rgba(57, 240, 212, 0.4), #0cc99050); */
+      /*background: radial-gradient(circle, rgba(247, 15, 15, 0.9), #c95b0c50);*/
+      background: radial-gradient(circle, #dc052c, #dc052c);
+  
+      border-radius: 20%;
+      /* backdrop-filter: blur(0.3rem); */
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+      position: absolute;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    }
+  }
+  

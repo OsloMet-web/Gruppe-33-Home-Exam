@@ -153,18 +153,12 @@ plus some extra to hide the left corners
 
 /* Main layout structure for the content; using grid for flexible layouts */
 .content-wrapper {
+  margin-left: 3rem;
   display: grid;
-  grid-template-columns: 2fr 1.5fr; /* Larger space for text, smaller for images */
+  grid-template-columns: 2fr 2fr; /* Larger space for text, smaller for images */
   gap: 40px; /* Spacing between grid items */
 }
 
-/* Styling for the main textual content area */
-.text-content {
-  padding-top: 3rem;
-  padding-left: 2rem;
-  justify-content: center;
-  vertical-align: middle; /* Centers the text content vertically and horizontally */
-}
 
 /* Header styles within the text content area */
 .text-content h1 {
@@ -177,6 +171,7 @@ plus some extra to hide the left corners
 .text-content p {
   font-size: 1rem;
   margin-top: 2rem;
+  margin-right: 4rem;
 }
 
 /* Button styling */
@@ -213,7 +208,7 @@ plus some extra to hide the left corners
 
 /* Article styles within the campus info*/
 .campus-info article {
-  background-color: var(--light-color);
+  background-color:var(--light-color);
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
@@ -310,67 +305,6 @@ main .card:nth-child(even) {
   text-decoration: none;
   color:#414141;
 } */
-
-/* Campus page styles */
-
-/* This sets the style for main body . It adds margins to both sides*/
-.mainview {
-  margin-left: var(--main-padding);
-  margin-right: var(--main-padding);
-  width: calc(100% - 2 * var(--main-padding));
-  background-color: var(--light-color);
-  padding: 1em;
-}
-
-/* Style for reference items eg photos or texts  
- */
-.item-reference {
-  background-color: var(--light-color);
-  margin-bottom: 1.5em;
-  /* background-color:antiquewhite; */
-}
-
-.images {
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Styles pharagraphs inside the articles */
-article > p {
-  line-height: 1.5em;
-  margin-bottom: 1em;
-}
-
-/* Styles h1 elements inside the articles */
-article > h1 {
-  margin-bottom: 1em;
-}
-
-/* Styles summary paragraphs*/
-.summary {
-  font-weight: 800;
-  color: rgb(43, 41, 41);
-}
-
-/* Styles extra information "aside"*/
-.side-info {
-  float: right;
-  width: 25vw;
-  background-color: rgb(247, 249, 243);
-  margin: 1em;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 1em;
-  padding-left: 2em;
-  font-style: italic;
-  font-weight: 500;
-  border-radius: 16px;
-  border: 4px solid var(--button-color);
-}
-
-.side-info li {
-  padding-bottom: 0.8em;
-}
 
 /* Accessibility page styles */
 
