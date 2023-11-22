@@ -184,9 +184,9 @@ plus some extra to hide the left corners
 /* Button styling */
 .home-button {
   background-color: var(--semi-dark-teal);
-  padding: 1.5rem;
-  width: 11rem;
+  padding: 1rem;
   border-radius: 10px;
+  text-align: center;
 }
 
 /* Hover styling for button */
@@ -197,7 +197,6 @@ plus some extra to hide the left corners
 /* Link styling within the button */
 .home-button a {
   text-decoration: none;
-  width: 10rem;
   color: var(--white-color);
 }
 
@@ -446,11 +445,6 @@ footer {
   }
 
 /*Topical page style*/
-
-.container{
-  margin-top:6rem ;
-}
-
   .hero {
     flex-direction: column;
   }
