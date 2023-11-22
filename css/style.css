@@ -186,6 +186,11 @@ plus some extra to hide the left corners
   border-radius: 10px;
 }
 
+/* Hover styling for button */
+.home-button:hover {
+  opacity: 0.8;
+}
+
 /* Link styling within the button */
 .home-button a {
   text-decoration: none;
