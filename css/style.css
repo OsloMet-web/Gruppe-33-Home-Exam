@@ -10,10 +10,10 @@ greater than 992 => This is the default CSS.
 /* We define the common variables */
 :root {
   --main-padding: 15vw;
-  --dark-color: #023535;
-  --header-color: #015958;
-  --button-color: #008f8c;
-  --light-color: #c7ffed;
+  --dark-teal: #023535;
+  --semi-dark-teal: #015958;
+  --mid-teal: #008f8c;
+  --light-teal: #c7ffed;
   --white-color: #fff;
 }
 
@@ -25,24 +25,19 @@ greater than 992 => This is the default CSS.
   font-family: sans-serif;
 }
 
-/* Styling for the footer */
-footer {
-  margin-top: 10px;
-  padding: 2rem var(--main-padding);
-  background-color: var(--button-color);
-  text-align: center;
+p {
+  line-height: 2rem;
 }
 
-/* Styling for the navigation bar */
+/* Flexbox setup for navbar: aligns items horizontally, centers vertically, and justifies content to the right */
 .navbar {
   padding: 1rem var(--main-padding);
-  background-color: var(--dark-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin: 0;
+  background-color: var(--dark-teal);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  margin: 0;
 }
 
 .navbar-logo {
@@ -56,11 +51,12 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 4px; /* The gap between menu elements. */
+  gap: 4px;
 }
 
 /* Transitions sets the animation between normal vs hovered */
 .navbar li a {
+  /* display: block; gerekli mi emin olamadim ??? */
   display: block;
   color: var(--white-color);
   text-align: center;
@@ -73,7 +69,7 @@ footer {
 
 /* Hovering with mouse would change background color and border */
 .navbar li a:hover {
-  background-color: var(--header-color);
+  background-color: var(--semi-dark-teal);
   border-radius: 20px;
 }
 
@@ -83,8 +79,9 @@ footer {
   text-decoration: none;
   font-weight: 600;
   font-size: x-large;
-  text-align: left;
 }
+
+/* Comprehensive styling for a responsive hamburger menu.*/
 
 /* Style for the title container. This is the first element of the 
 flex container we prevent its growing, but let it shrink. */
@@ -113,9 +110,10 @@ flex container we prevent its growing, but let it shrink. */
 as we will have red backgrousn and we hide the second bar thorugh setting opacity   */
 
 #burger-menu-toggle:checked + div label .bar {
-  background-color: white;
+  background-color: var(--white-color);
 }
 
+/* gerekli mi ??? */
 #burger-menu-toggle:checked + div label #bar2 {
   opacity: 0;
 }
@@ -155,7 +153,7 @@ plus some extra to hide the left corners
   z-index: -3;
 }
 
-/*Styles  for home page*/
+/*Generel styles for home page, campus page and accessibility page */
 
 /* Main layout structure for the content; using grid for flexible layouts */
 .content-wrapper {
@@ -177,7 +175,7 @@ plus some extra to hide the left corners
 
 /* Header styles within the text content area */
 .text-content h1 {
-  color: var(--header-color);
+  color: var(--semi-dark-teal);
   font-size: 2.5rem;
   margin-top: 2rem;
 }
@@ -191,22 +189,26 @@ plus some extra to hide the left corners
 
 /* Button styling */
 .home-button {
-  background-color: var(--header-color);
+  background-color: var(--semi-dark-teal);
   padding: 1.5rem;
   width: 11rem;
   border-radius: 10px;
+}
+
+/* Hover styling for button */
+.home-button:hover {
+  opacity: 0.8;
 }
 
 /* Link styling within the button */
 .home-button a {
   text-decoration: none;
   color: var(--white-color);
-  width: 10rem;
 }
 
 .accessibility-header {
   text-align: center;
-  color: var(--header-color);
+  color: var(--semi-dark-teal);
   margin: 2rem;
 }
 
@@ -228,8 +230,8 @@ plus some extra to hide the left corners
   height: auto;
 }
 
-/* Section for additional campus information with a grid layout */
-.campus-info {
+/* Section for additional information with a grid layout */
+.info-section {
   min-height: 400px;
   margin: 3rem;
   display: grid;
@@ -237,15 +239,15 @@ plus some extra to hide the left corners
   gap: 30px;
 }
 
-/* Header styles within the campus info sections */
-.campus-info h2 {
+/* Header styles within the info sections */
+.info-section h2 {
   margin-bottom: 2rem;
-  color: var(--header-color);
+  color: var(--semi-dark-teal);
 }
 
-/* Article styles within the campus info*/
-.campus-info article {
-  background-color: var(--light-color);
+/* Article styles within the info section  .campus-info article*/
+.info-section article {
+  background-color: var(--light-teal);
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
@@ -257,46 +259,43 @@ plus some extra to hide the left corners
   margin: 2rem auto;
 }
 
+/* sadece .hero olmali mi*/
 header.hero {
   background-color: #c5e898;
   display: flex;
   align-items: center;
-  gap: 1rem; /* Sets the space between two sections */
+  gap: 1rem;
   padding: 1rem;
   text-align: justify;
   border-radius: 10px;
 }
 
-header.hero h1,
-p {
-  line-height: 2rem;
-}
-
 header.hero h1 {
   color: #0766ad;
 }
-/* Hovering over the A tag targets the state and changes the text color. */
-header.hero a:hover {
-  color: #fff;
-}
+
 header.hero img {
   width: 100%;
   min-width: 300px;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
-header.hero .section-text {
+/* header.hero .section-text {
+  flex: 1.9;
+}*/
+.section-text {
   flex: 1.9;
 }
-
-header.hero .section-img {
+.section-img {
   flex: 1;
 }
+/* header.hero .section-img {
+  flex: 1;
+} */
 
 .button2 {
   background-color: #0766ad;
   cursor: pointer;
-  opacity: 0.9;
   padding: 1rem;
   border-radius: 5px;
   border: none;
@@ -309,7 +308,12 @@ header.hero .section-img {
   color: var(--white-color);
 }
 
-main .card {
+/* Hovering over the A tag targets the state and changes the text color. */
+.button2 a:hover {
+  color: #000;
+}
+
+.card {
   display: flex;
   align-items: center;
   border: 20px;
@@ -319,7 +323,7 @@ main .card {
   margin: 2rem 0;
 }
 
-main .card article {
+.card article {
   flex: 1;
 }
 
@@ -327,55 +331,68 @@ main .card img {
   width: 100%;
   border-radius: 5px;
 }
+
 figcaption {
   text-align: center;
   padding: 0.5rem;
   font-style: italic;
-  font-size: x-small;
 }
 
 /* It targets the cards in even rows of cards on the page and applies a special order to them. */
-main .card:nth-child(even) {
+.card:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+/* Styling for the footer */
+footer {
+  margin-top: 10px;
+  padding: 2rem var(--main-padding);
+  background-color: var(--mid-teal);
+  text-align: center;
 }
 
 /* Media Query Controls */
 
 /* For smaller screens we decrease the padding for the body, and increase the width for aside*/
 @media (max-width: 992px) {
-  :root {
-    --main-padding: 12vw;
+  .content-wrapper {
+    grid-template-columns: 1fr; /* Use only one column */
   }
 
-  .side-info {
-    width: 32vw;
+  .image-content img {
+    width: 100%; /* Make the image full width */
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section > div {
+    margin-bottom: 20px; /* Adds some space between each section */
   }
 }
 
 /* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
 @media (max-width: 768px) {
-  :root {
-    --main-padding: 8vw;
-  }
-
-  .side-info {
-    width: 40vw;
-  }
-
   header.hero {
     flex-direction: column;
   }
 
-  main .card {
+  .card {
     flex-direction: column;
   }
 
+  /* bu kod gerekli mi ?? */
   main .card:nth-child(even) {
     flex-direction: column;
   }
 
   .content-wrapper {
-    grid-template-columns: 1fr; /* Use only one column */
+    grid-template-columns: 1fr; /* Use only one column should we remove??? */
+    margin-top: 5rem;
+    margin-left: 1rem;
   }
 
   .campus-info {
@@ -391,11 +408,11 @@ main .card:nth-child(even) {
 
 /* At mobile phone size, we decrease the padding for the body further, and ilet the aside have full width*/
 @media (max-width: 576px) {
-  :root {
-    --main-padding: 5vw;
+  .accessibility-header {
+    margin-top: 6.5rem;
   }
 
-  /* When the screen is smaller we have a higher navbar we need to have more padding for main view */
+  /* Should we delete ?? When the screen is smaller we have a higher navbar we need to have more padding for main view */
   .container,
   .main,
   .mainview {
@@ -543,10 +560,8 @@ main .card:nth-child(even) {
     z-index: 1;
     width: 0;
     height: 0;
-    background: #dc052c;
-
+    background-color: #dc052d;
     border-radius: 20%;
-    /* backdrop-filter: blur(0.3rem); */
     transition-duration: 0.2s;
     transition-timing-function: ease;
     position: absolute;
