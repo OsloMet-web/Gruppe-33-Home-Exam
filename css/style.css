@@ -381,11 +381,10 @@ footer {
     margin-top: 6.5rem;
   }
 
-  /* Should we delete ?? When the screen is smaller we have a higher navbar we need to have more padding for main view */
-  /* .container,
-  .main{
+/*  When the screen is smaller we have a higher navbar we need to have more padding for main view */
+  .container, main{
     padding-top: 105px;
-  } */
+  }
 
   /* Navbar and Hamburger Menu styles */
   /* We got the idea of Hamburger from the lecture slides and
@@ -404,6 +403,9 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
+    top: 0;
+    left: 0;
+    position: absolute;
   }
 
   #hamburger {
@@ -467,14 +469,6 @@ footer {
     color: white;
   }
 
-  /* Menu Background */
-
-  .navbar {
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-
   /* Styles of the red menu background
   It is hidden in the begining but still its location was set to
   exact location of the center of hamburger lines to ensure that during animation
@@ -497,9 +491,6 @@ footer {
     position: absolute;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   }
-
-  
-
 }
 
 /* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
@@ -508,13 +499,14 @@ footer {
     --main-padding: 8vw;
   }
 
+  /*Generel pages sytles*/
+
   .hero {
     flex-direction: column;
   }
   .image-content {
     flex-direction: column;
   }
-
 
   .card {
     flex-direction: column;
@@ -632,8 +624,6 @@ footer {
     .info-section > div {
       margin-bottom: 20px; /* Adds some space between each section */
     }
-  
-
 }
 
 
