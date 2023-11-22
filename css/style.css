@@ -211,6 +211,11 @@ plus some extra to hide the left corners
   margin: 2rem;
 }
 
+.accessibility-image{
+  width: 600;
+  height: 350;
+}
+
 /*Info section styles*/
 
 .image-content {
