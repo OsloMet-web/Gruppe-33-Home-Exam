@@ -40,7 +40,12 @@ p {
   margin: 0;
 }
 
-/* Navbar list styling: removes bullets, displays items in a row with flex, aligns them center, and sets a 4px gap */
+.navbar-logo {
+  height: 50px; /* Adjust the height as needed */
+  margin-right: 10px; /* Space between the logo and the title */
+  vertical-align: middle; /* Aligns the logo with the text */
+}
+
 .navbar ul {
   list-style-type: none;
   display: flex;
@@ -163,7 +168,6 @@ plus some extra to hide the left corners
   gap: 40px; /* Spacing between grid items */
 }
 
-
 /* Header styles within the text content area */
 .text-content h1 {
   color: var(--semi-dark-teal);
@@ -197,9 +201,9 @@ plus some extra to hide the left corners
   color: var(--white-color);
 }
 
-.accessibility-header{
+.accessibility-header {
   text-align: center;
-  color:var(--semi-dark-teal);
+  color: var(--header-color);
   margin: 2rem;
 }
 
@@ -220,23 +224,23 @@ plus some extra to hide the left corners
   color: var(--semi-dark-teal);
 }
 
-/* Article styles within the info section*/
-.info-section article {
-  background-color:var(--light-teal);
+/* Article styles within the campus info*/
+.campus-info article {
+  background-color: var(--light-color);
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
 }
 
 /* Topical page styles */
+/* General styles */
 .container {
   max-width: 1200px;
   margin: 2rem auto;
 }
-
-/* sadece .hero olmali mi*/
+/* Hero section styles */
 header.hero {
-  background-color: #C5E898;
+  background-color: #c5e898;
   display: flex;
   align-items: center;
   gap: 1rem; 
@@ -244,32 +248,36 @@ header.hero {
   text-align: justify;
   border-radius: 10px;
 }
-
-header.hero h1 {
-  color: #0766AD;
+/* Hero paragraphs */
+header.hero h1,
+p {
+  line-height: 2rem;
 }
-
+/* Hero title */
+header.hero h1 {
+  color: #0766ad;
+}
+/* Hovering over the A tag targets the state and changes the text color. */
+header.hero a:hover {
+  color: #fff;
+}
+/* Hero image */
 header.hero img {
   width: 100%;
-  min-width: 300px;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
-/* header.hero .section-text {
+/* Hero text section */
+header.hero .section-text {
   flex: 1.9;
-}*/
-.section-text {
-  flex: 1.9;
-} 
-.section-img {
+}
+/* Hero visual section */
+header.hero .section-img {
   flex: 1;
 }
-/* header.hero .section-img {
-  flex: 1;
-} */
-
+/* Button styles */
 .button2 {
-  background-color:#0766AD;
+  background-color: #0766ad;
   cursor: pointer;
   padding: 1rem;
   border-radius: 5px;
@@ -282,13 +290,8 @@ header.hero img {
   font-weight: 500;
   color: var(--white-color);
 }
-
-/* Hovering over the A tag targets the state and changes the text color. */
-.button2 a:hover{
-  color: #000;
-}
-
-.card {
+/* Main content cards */
+main .card {
   display: flex;
   align-items: center;
   border: 20px;
@@ -296,17 +299,41 @@ header.hero img {
   padding: 1rem;
   gap: 1rem;
   margin: 2rem 0;
-}
-
-.card article {
   flex: 1;
 }
+/* Card headers */
+main .card h2,
+h3,
+h4,
+h5 {
+  color: #dc052c;
+  line-height: 3rem;
+}
+/* Card content general */
+main .card article {
+  width: 50%;
+}
+/* Paragraph indents and Link colors */
+main .card .article,
+p {
+  text-indent: 30px;
+}
 
+main .card .article .p,
+a {
+  color: green;
+  text-decoration: none;
+}
+/* Card image */
 main .card img {
   width: 100%;
   border-radius: 5px;
 }
-
+main .card figure {
+  /*width: 20%;*/
+  width: 50%;
+}
+/* Image description */
 figcaption {
   text-align: center;
   padding: 0.5rem;
@@ -331,6 +358,61 @@ figcaption {
 
 /* For smaller screens we decrease the padding for the body, and increase the width for aside*/
 @media (max-width: 992px) {
+  :root {
+    --main-padding: 12vw;
+  }
+
+  .side-info {
+    width: 32vw;
+  }
+
+  main .card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  main .card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  main .card article {
+    width: 100%;
+  }
+
+  main .card figure {
+    width: 100%;
+  }
+
+  main .card img {
+    max-height: 500px;
+  }
+}
+
+/* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
+@media (max-width: 768px) {
+  :root {
+    --main-padding: 8vw;
+  }
+
+  .side-info {
+    width: 40vw;
+  }
+
+  header.hero {
+    flex-direction: column;
+  }
+  .image-content {
+    flex-direction: column;
+  }
+
+  main .card {
+    flex-direction: column;
+  }
+
+  main .card:nth-child(even) {
+    flex-direction: column;
+  }
+
   .content-wrapper {
     grid-template-columns: 1fr; /* Use only one column */
   }
