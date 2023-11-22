@@ -13,11 +13,13 @@
     </title>
   </head>
   <body>
+      <!-- Header with navigation -->
     <header>
       <!-- Hamburger menu for mobile -->
       <nav class="navbar">
+         <!-- Responsive menu toggle -->
         <input id="burger-menu-toggle" type="checkbox" />
-
+<!-- Hamburger icon and site title -->
         <div id="hamburger">
           <label id="hamburger-lines" for="burger-menu-toggle">
             <div id="bar1" class="bar"></div>
@@ -37,10 +39,11 @@
         <div class="menu-bg" id="menu-bg"></div>
       </nav>
     </header>
-    <!-- Main content container -->
-    <div class="container">
+    
+    <!-- Main content of the page -->
+    <main class="container">
       <!-- Page title and main image -->
-      <header class="hero">
+      <div class="hero">
         <!-- Text section -->
         <section class="section-text">
           <h1>SMART CITIES</h1>
@@ -67,12 +70,9 @@
           />
           <!-- Image source -->
           <!-- Picture from; Grønlikaia visuals- Photo: Rodeo Arkitekter AS -->
-          <!-- <a
-            href="https://www.futurebuilt.no/Forbildeprosjekter?municipal%5B%5D=oslo#!/Forbildeprosjekter/Groenlikaia-Oslo"
-          ></a> -->
+          <!-- Source of the image : "https://www.futurebuilt.no/Forbildeprosjekter?municipal%5B%5D=oslo#!/Forbildeprosjekter/Groenlikaia-Oslo" -->
         </section>
-      </header>
-      <main>
+      </div>
         <!-- First card (Smart Cities Initiatives in Grønlikaia) -->
         <section class="card">
           <article>
@@ -88,7 +88,7 @@
               evening sun and a panoramic view of the city and the fjord. Today,
               the area is still a closed container port. Click for more
               information
-              <a href="https://haveiendom.no/om-gronlikaia/" target="_blank"
+              <a class="external-link" href="https://haveiendom.no/om-gronlikaia/" target="_blank"
                 >about the Grønlikaia area.</a
               >
             </p>
@@ -124,7 +124,7 @@
               proposal demands a delicate negotiation between innovation and
               security, as well as a consideration of the trade-offs between
               affordable housing and individual privacy.Click for
-              <a
+              <a class="external-link" 
                 href="https://www.futurebuilt.no/Forbildeprosjekter?municipal%5B%5D=oslo#!/Forbildeprosjekter/Groenlikaia-Oslo"
                 target="_blank"
                 >detailed information about the Grønlikaia Smart City
@@ -187,7 +187,6 @@
             </figcaption>
           </figure>
         </section>
-      </main>
-    </div>
+    </main>
   </body>
 </html>
