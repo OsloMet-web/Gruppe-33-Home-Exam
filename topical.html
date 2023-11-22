@@ -13,37 +13,34 @@
     </title>
   </head>
   <body>
-    <!-- Header with navigation -->
-    <header>
-      <!-- Hamburger menu for mobile -->
-      <nav class="navbar">
-        <!-- Responsive menu toggle -->
-        <input id="burger-menu-toggle" type="checkbox" />
-        <!-- Hamburger icon and site title -->
-        <div id="hamburger">
-          <label id="hamburger-lines" for="burger-menu-toggle">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-          </label>
-          <p><a class="title" href="./index.html">OsloMet Campus</a></p>
-        </div>
+    <!-- Hamburger menu for mobile -->
+    <nav class="navbar">
+      <!-- Responsive menu toggle -->
+      <input id="burger-menu-toggle" type="checkbox" />
+      <!-- Hamburger icon and site title -->
+      <div id="hamburger">
+        <label id="hamburger-lines" for="burger-menu-toggle">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </label>
+        <p><a class="title" href="./index.html">OsloMet Campus</a></p>
+      </div>
 
-        <!-- Navbar menu items -->
-        <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./topical.html">Topical</a></li>
-          <li><a href="./campus.html">Campus</a></li>
-          <li><a href="./accessibility.html">Accessibility</a></li>
-        </ul>
-        <div class="menu-bg" id="menu-bg"></div>
-      </nav>
-    </header>
+      <!-- Navbar menu items -->
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./topical.html">Topical</a></li>
+        <li><a href="./campus.html">Campus</a></li>
+        <li><a href="./accessibility.html">Accessibility</a></li>
+      </ul>
+      <div class="menu-bg" id="menu-bg"></div>
+    </nav>
 
     <!-- Main content of the page -->
-    <main class="container">
+    <div class="container">
       <!-- Page title and main image -->
-      <div class="hero">
+      <header class="hero">
         <!-- Text section -->
         <section class="section-text">
           <h1>SMART CITIES</h1>
@@ -72,118 +69,127 @@
           <!-- Picture from; Grønlikaia visuals- Photo: Rodeo Arkitekter AS -->
           <!-- Source of the image : "https://www.futurebuilt.no/Forbildeprosjekter?municipal%5B%5D=oslo#!/Forbildeprosjekter/Groenlikaia-Oslo" -->
         </section>
-      </div>
-      <!-- First card (Smart Cities Initiatives in Grønlikaia) -->
-      <section class="card">
-        <article>
-          <h2>Smart Cities Initiatives in Grønlikaia</h2>
-          <p>
-            In the realm of urban development, the concept of smart city
-            initiatives has emerged as a transformative force, integrating
-            advanced digital technology to enhance efficiency, sustainability,
-            and overall quality of life. At the forefront of this movement is
-            the hypothetical proposal by Sidewalk Labs to create a smart city
-            environment in Grønlikaia, Oslo.Grønlikaia is a somewhat unknown
-            place for many, although it is right next to Sørenga and has long
-            evening sun and a panoramic view of the city and the fjord. Today,
-            the area is still a closed container port. Click for more
-            information
-            <a
-              class="external-link"
-              href="https://haveiendom.no/om-gronlikaia/"
-              target="_blank"
-              >about the Grønlikaia area.</a
-            >
-          </p>
-          <p>
-            The proposal envisions leveraging IoT software, data analytics, and
-            sensors to propel Grønlikaia into the realm of sustainable urban
-            development. The potential benefits include reduced energy
-            consumption, efficient resource utilization, and a smaller carbon
-            footprint, aligning with global trends in environmental
-            sustainability. Furthermore, the provision of affordable housing
-            aims to improve economic well-being for residents, contributing to a
-            holistic vision for a thriving community.
-          </p>
-        </article>
-        <!-- Image of the first card -->
-        <figure>
-          <img src="./images/Grønlikaia.webp" alt="Grønlikaia illustrasjon" />
-          <figcaption>
-            Grønlikaia visual - Illustrasjon: Team Vandkunsten
-          </figcaption>
-        </figure>
-      </section>
-      <!-- Second card (Ethical Concerns) -->
-      <section class="card">
-        <article>
-          <h3>Ethical Concerns</h3>
-          <p>
-            The integration of advanced technology raises ethical concerns,
-            particularly regarding data privacy. Requiring residents to consent
-            to personal data collection creates a potential surveillance-like
-            environment, where constant monitoring may lead to unauthorized
-            access or misuse of personal information. The proposal demands a
-            delicate negotiation between innovation and security, as well as a
-            consideration of the trade-offs between affordable housing and
-            individual privacy.Click for
-            <a
-              class="external-link"
-              href="https://www.futurebuilt.no/Forbildeprosjekter?municipal%5B%5D=oslo#!/Forbildeprosjekter/Groenlikaia-Oslo"
-              target="_blank"
-              >detailed information about the Grønlikaia Smart City Project.</a
-            >
-          </p>
-          <p>
-            The impact on society and the city is multifaceted. On one hand, the
-            introduction of IoT technology and sustainable urban planning
-            promises enhanced public services, reduced energy consumption, and
-            improved transportation options. Conversely, the risk of a digital
-            divide and exacerbation of social inequalities looms large, as
-            segments of the population may be excluded from the benefits of
-            smart city features.
-          </p>
-        </article>
-        <!-- Image of the second card -->
-        <figure>
-          <img src="./images/grønlikaia3.webp" alt="grønlikaia iluustrasjon3" />
-          <figcaption>
-            Grønlikaia visuals- Photo: Rodeo Arkitekter AS
-          </figcaption>
-        </figure>
-      </section>
-      <!-- Third card (Unintended Consequences) -->
-      <section class="card">
-        <article>
-          <h4>Unintended Consequences</h4>
-          <p>
-            The potential unintended consequences of the Grønlikaia project
-            include constant surveillance for residents who opt to share
-            personal data, raising fears of misuse or unauthorized access. The
-            heavy reliance on technology also introduces the risk of system
-            failures and cyberattacks, disrupting essential services and
-            potentially leaving residents vulnerable.
-          </p>
-          <h5>Summary</h5>
-          <p>
-            In summary, the Grønlikaia smart city project symbolizes the
-            evolving landscape where technology and society intersect. The
-            success of this initiative hinges on addressing ethical concerns,
-            safeguarding privacy, and ensuring inclusivity. Only through careful
-            planning and a commitment to balancing the benefits and challenges
-            can the Grønlikaia project truly enhance the community's overall
-            well-being and serve as a blueprint for responsible and sustainable
-            smart city development.
-          </p>
-        </article>
-        <!-- Image of the third card -->
-        <figure>
-          <img src="./images/grønlikaia4.webp" alt="Grønlikaia illustrasjon4" />
-          <figcaption>
-            Grønlikaia visuals- Photo: Rodeo Arkitekter AS
-          </figcaption>
-        </figure>
-      </section>
-    </main>
+      </header>
+      <main>
+        <!-- First card (Smart Cities Initiatives in Grønlikaia) -->
+        <section class="card">
+          <article>
+            <h2>Smart Cities Initiatives in Grønlikaia</h2>
+            <p>
+              In the realm of urban development, the concept of smart city
+              initiatives has emerged as a transformative force, integrating
+              advanced digital technology to enhance efficiency, sustainability,
+              and overall quality of life. At the forefront of this movement is
+              the hypothetical proposal by Sidewalk Labs to create a smart city
+              environment in Grønlikaia, Oslo.Grønlikaia is a somewhat unknown
+              place for many, although it is right next to Sørenga and has long
+              evening sun and a panoramic view of the city and the fjord. Today,
+              the area is still a closed container port. Click for more
+              information
+              <a
+                class="external-link"
+                href="https://haveiendom.no/om-gronlikaia/"
+                target="_blank"
+                >about the Grønlikaia area.</a
+              >
+            </p>
+            <p>
+              The proposal envisions leveraging IoT software, data analytics,
+              and sensors to propel Grønlikaia into the realm of sustainable
+              urban development. The potential benefits include reduced energy
+              consumption, efficient resource utilization, and a smaller carbon
+              footprint, aligning with global trends in environmental
+              sustainability. Furthermore, the provision of affordable housing
+              aims to improve economic well-being for residents, contributing to
+              a holistic vision for a thriving community.
+            </p>
+          </article>
+          <!-- Image of the first card -->
+          <figure>
+            <img src="./images/Grønlikaia.webp" alt="Grønlikaia illustrasjon" />
+            <figcaption>
+              Grønlikaia visual - Illustrasjon: Team Vandkunsten
+            </figcaption>
+          </figure>
+        </section>
+        <!-- Second card (Ethical Concerns) -->
+        <section class="card">
+          <article>
+            <h3>Ethical Concerns</h3>
+            <p>
+              The integration of advanced technology raises ethical concerns,
+              particularly regarding data privacy. Requiring residents to
+              consent to personal data collection creates a potential
+              surveillance-like environment, where constant monitoring may lead
+              to unauthorized access or misuse of personal information. The
+              proposal demands a delicate negotiation between innovation and
+              security, as well as a consideration of the trade-offs between
+              affordable housing and individual privacy.Click for
+              <a
+                class="external-link"
+                href="https://www.futurebuilt.no/Forbildeprosjekter?municipal%5B%5D=oslo#!/Forbildeprosjekter/Groenlikaia-Oslo"
+                target="_blank"
+                >detailed information about the Grønlikaia Smart City
+                Project.</a
+              >
+            </p>
+            <p>
+              The impact on society and the city is multifaceted. On one hand,
+              the introduction of IoT technology and sustainable urban planning
+              promises enhanced public services, reduced energy consumption, and
+              improved transportation options. Conversely, the risk of a digital
+              divide and exacerbation of social inequalities looms large, as
+              segments of the population may be excluded from the benefits of
+              smart city features.
+            </p>
+          </article>
+          <!-- Image of the second card -->
+          <figure>
+            <img
+              src="./images/grønlikaia3.webp"
+              alt="grønlikaia iluustrasjon3"
+            />
+            <figcaption>
+              Grønlikaia visuals- Photo: Rodeo Arkitekter AS
+            </figcaption>
+          </figure>
+        </section>
+        <!-- Third card (Unintended Consequences) -->
+        <section class="card">
+          <article>
+            <h4>Unintended Consequences</h4>
+            <p>
+              The potential unintended consequences of the Grønlikaia project
+              include constant surveillance for residents who opt to share
+              personal data, raising fears of misuse or unauthorized access. The
+              heavy reliance on technology also introduces the risk of system
+              failures and cyberattacks, disrupting essential services and
+              potentially leaving residents vulnerable.
+            </p>
+            <h5>Summary</h5>
+            <p>
+              In summary, the Grønlikaia smart city project symbolizes the
+              evolving landscape where technology and society intersect. The
+              success of this initiative hinges on addressing ethical concerns,
+              safeguarding privacy, and ensuring inclusivity. Only through
+              careful planning and a commitment to balancing the benefits and
+              challenges can the Grønlikaia project truly enhance the
+              community's overall well-being and serve as a blueprint for
+              responsible and sustainable smart city development.
+            </p>
+          </article>
+          <!-- Image of the third card -->
+          <figure>
+            <img
+              src="./images/grønlikaia4.webp"
+              alt="Grønlikaia illustrasjon4"
+            />
+            <figcaption>
+              Grønlikaia visuals- Photo: Rodeo Arkitekter AS
+            </figcaption>
+          </figure>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
