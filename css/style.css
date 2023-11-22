@@ -50,7 +50,6 @@ p {
 
 /* Transitions sets the animation between normal vs hovered */
 .navbar li a {
-  /* display: block; gerekli mi emin olamadim ??? */
   display: block;
   color: var(--white-color);
   text-align: center;
@@ -181,6 +180,12 @@ plus some extra to hide the left corners
   min-width: 300px;
 }
 
+/* Home page image styling */
+
+.home-image{
+  width:800px;
+  height:auto;
+}
 /* Button styling */
 .home-button {
   background-color: var(--semi-dark-teal);
@@ -206,7 +211,7 @@ plus some extra to hide the left corners
   margin: 2rem;
 }
 
-/*Campus section styles*/
+/*Info section styles*/
 
 .image-content {
   display: flex;
@@ -214,7 +219,6 @@ plus some extra to hide the left corners
   margin-right: 1em;
   max-width: 50vw; /* Make the image half of the view */
   float: left; /* It should float on left so we will have text on the right*/
-
   box-sizing: border-box; /* Include padding and border in max-width calculation */
   padding-bottom: 0.5em;
 }
@@ -239,7 +243,7 @@ plus some extra to hide the left corners
   color: var(--semi-dark-teal);
 }
 
-/* Article styles within the info section  .campus-info article*/
+/* Article styles within the info section  .info-section article*/
 .info-section article {
   background-color: var(--light-teal);
   padding: 2rem;
@@ -371,138 +375,15 @@ footer {
 
 /* Media Query Controls */
 
-/* For smaller screens we decrease the padding for the body, and increase the width for aside*/
-@media (max-width: 992px) {
-  /* Adjust the main padding for the root element */
-  :root {
-    --main-padding: 12vw;
-  }
-
-  /* Style adjustments for .card elements */
-  .card {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  /* Style adjustments for even-numbered .card elements */
-  .card:nth-child(even) {
-    flex-direction: column;
-  }
-
-  /* Style adjustments for article elements inside .card */
-  .card article {
-    width: 100%;
-  }
-
-  /* Style adjustments for figure elements inside .card */
-  .card figure {
-    width: 100%;
-  }
-
-  /* Style adjustments for img elements inside .card */
-  .card img {
-    max-height: 500px;
-  }
-}
-
-/* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
-@media (max-width: 768px) {
-  :root {
-    --main-padding: 8vw;
-  }
-
-  .hero {
-    flex-direction: column;
-  }
-  .image-content {
-    flex-direction: column;
-  }
-
-  .card {
-    flex-direction: column;
-  }
-
-  .card:nth-child(even) {
-    flex-direction: column;
-  }
-
-  .content-wrapper {
-    grid-template-columns: 1fr; /* Use only one column */
-  }
-
-  .image-content img {
-    width: 100%; /* Make the image full width */
-  }
-
-  .info-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-section > div {
-    margin-bottom: 20px; /* Adds some space between each section */
-  }
-
-/*Topical page style*/
-  .hero {
-    flex-direction: column;
-  }
-
-  .card {
-    flex-direction: column;
-  }
-}
-
-
 /* At mobile phone size, we decrease the padding for the body further, and ilet the aside have full width*/
 @media (max-width: 576px) {
   .accessibility-header {
     margin-top: 6.5rem;
   }
 
-  /* Should we delete ?? When the screen is smaller we have a higher navbar we need to have more padding for main view */
-  .container,
-  .main,
-  .mainview {
+/*  When the screen is smaller we have a higher navbar we need to have more padding for main view */
+  .container, main{
     padding-top: 105px;
-  }
-
-  /* when the screen is small we waould like to remove margins so it would be full screen*/
-  .image-content {
-    display: flex;
-    flex-direction: column;
-    margin-right: 0;
-    max-width: 100vw; /* Make the image half of the view */
-    float: left; /* It should float on left so we will have text on the right*/
-    box-sizing: border-box; /* Include padding and border in max-width calculation */
-    padding-bottom: 0.5em;
-  }
-
-  .content-wrapper-campus {
-    margin-left: 0px; /* In small screens we want to remove 
-    the margin from left so image will be full screen */
-  }
-
-  .content-wrapper-campus .text-content {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
-  .campus-info {
-    margin: 1rem;
-  }
-
-  .text-content {
-    padding-top: 0;
-  }
-
-  /* Side Info */
-  .side-info {
-    float: none;
-    width: auto;
-    margin-left: 0;
-    margin-top: 1em;
   }
 
   /* Navbar and Hamburger Menu styles */
@@ -522,6 +403,9 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
+    top: 0;
+    left: 0;
+    position: absolute;
   }
 
   #hamburger {
@@ -585,14 +469,6 @@ footer {
     color: white;
   }
 
-  /* Menu Background */
-
-  .navbar {
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-
   /* Styles of the red menu background
   It is hidden in the begining but still its location was set to
   exact location of the center of hamburger lines to ensure that during animation
@@ -616,3 +492,140 @@ footer {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   }
 }
+
+/* For smaller screens we further decrease the padding for the body, and increase the width for aside*/
+@media (max-width: 768px) {
+  :root {
+    --main-padding: 8vw;
+  }
+
+  /*Generel pages sytles*/
+
+  .hero {
+    flex-direction: column;
+  }
+  .image-content {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr; /* Use only one column */
+  }
+
+  .image-content img {
+    width: 100%; /* Make the image full width */
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section > div {
+    margin-bottom: 20px; /* Adds some space between each section */
+  }
+
+/*Topical page style*/
+  .hero {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+}
+
+/* For smaller screens we decrease the padding for the body, and increase the width for aside*/
+@media (max-width: 992px) {
+  /* Adjust the main padding for the root element */
+  :root {
+    --main-padding: 12vw;
+  }
+
+  /* Style adjustments for .card elements */
+  .card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Style adjustments for article elements inside .card */
+  .card article {
+    width: 100%;
+  }
+
+  /* Style adjustments for figure elements inside .card */
+  .card figure {
+    width: 100%;
+  }
+
+  /* Style adjustments for img elements inside .card */
+  .card img {
+    max-height: 500px;
+  }
+
+  .home-image{
+    width: 100%;
+    height: auto;
+  }
+
+    /* when the screen is small we waould like to remove margins so it would be full screen*/
+    .image-content {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0;
+      max-width: 100vw; /* Make the image half of the view */
+      float: left; /* It should float on left so we will have text on the right*/
+      box-sizing: border-box; /* Include padding and border in max-width calculation */
+      padding-bottom: 0.5em;
+    }
+  
+    .content-wrapper-campus {
+      margin-left: 0px; /* In small screens we want to remove 
+      the margin from left so image will be full screen */
+    }
+  
+    .text-content {
+      margin-left: 1em;
+      margin-right: 1em;
+      padding-top: 0;
+    }
+  
+    /* Side Info */
+    .side-info {
+      float: none;
+      width: auto;
+      margin-left: 0;
+      margin-top: 1em;
+    }
+  
+    .content-wrapper {
+      grid-template-columns: 1fr; /* Use only one column */
+    }
+  
+    .image-content img {
+      width: 100%; /* Make the image full width */
+    }
+  
+    .info-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-section > div {
+      margin-bottom: 20px; /* Adds some space between each section */
+    }
+}
+
+
+
+
