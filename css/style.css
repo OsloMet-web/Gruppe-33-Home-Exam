@@ -182,9 +182,9 @@ plus some extra to hide the left corners
 
 /* Home page image styling */
 
-.home-image{
-  width:800px;
-  height:auto;
+.home-image {
+  width: 800px;
+  height: auto;
 }
 /* Button styling */
 .home-button {
@@ -211,9 +211,9 @@ plus some extra to hide the left corners
   margin: 2rem;
 }
 
-.accessibility-image{
-  width: 600;
-  height: 350;
+.accessibility-image {
+  width: 500px;
+  height: 250px;
 }
 
 /*Info section styles*/
@@ -360,7 +360,6 @@ h5 {
 
 /* Image description */
 figcaption {
-  text-align: center;
   padding: 0.5rem;
   font-style: italic;
 }
@@ -382,13 +381,11 @@ footer {
 
 /* At mobile phone size, we decrease the padding for the body further, and ilet the aside have full width*/
 @media (max-width: 576px) {
-  .accessibility-header {
-    margin-top: 6.5rem;
-  }
-
-/*  When the screen is smaller we have a higher navbar we need to have more padding for main view */
-  .container, main{
-    padding-top: 105px;
+  /*  When the screen is smaller we have a higher navbar we need to have more padding for main view */
+  .container,
+  .accessibility-header,
+  main {
+    padding-top: 5rem;
   }
 
   /* Navbar and Hamburger Menu styles */
@@ -539,7 +536,7 @@ footer {
     margin-bottom: 20px; /* Adds some space between each section */
   }
 
-/*Topical page style*/
+  /*Topical page style*/
   .hero {
     flex-direction: column;
   }
@@ -577,60 +574,61 @@ footer {
     max-height: 500px;
   }
 
-  .home-image{
+  .home-image {
     width: 100%;
     height: auto;
   }
 
-    /* when the screen is small we waould like to remove margins so it would be full screen*/
-    .image-content {
-      display: flex;
-      flex-direction: column;
-      margin-right: 0;
-      max-width: 100vw; /* Make the image half of the view */
-      float: left; /* It should float on left so we will have text on the right*/
-      box-sizing: border-box; /* Include padding and border in max-width calculation */
-      padding-bottom: 0.5em;
-    }
-  
-    .content-wrapper-campus {
-      margin-left: 0px; /* In small screens we want to remove 
+  .accessibility-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* when the screen is small we waould like to remove margins so it would be full screen*/
+  .image-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    max-width: 100vw; /* Make the image half of the view */
+    float: left; /* It should float on left so we will have text on the right*/
+    box-sizing: border-box; /* Include padding and border in max-width calculation */
+    padding-bottom: 0.5em;
+  }
+
+  .content-wrapper-campus {
+    margin-left: 0px; /* In small screens we want to remove 
       the margin from left so image will be full screen */
-    }
-  
-    .text-content {
-      margin-left: 1em;
-      margin-right: 1em;
-      padding-top: 0;
-    }
-  
-    /* Side Info */
-    .side-info {
-      float: none;
-      width: auto;
-      margin-left: 0;
-      margin-top: 1em;
-    }
-  
-    .content-wrapper {
-      grid-template-columns: 1fr; /* Use only one column */
-    }
-  
-    .image-content img {
-      width: 100%; /* Make the image full width */
-    }
-  
-    .info-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .info-section > div {
-      margin-bottom: 20px; /* Adds some space between each section */
-    }
+  }
+
+  .text-content {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 0;
+  }
+
+  /* Side Info */
+  .side-info {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-top: 1em;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr; /* Use only one column */
+  }
+
+  .image-content img {
+    width: 100%; /* Make the image full width */
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section > div {
+    margin-bottom: 20px; /* Adds some space between each section */
+  }
 }
-
-
-
-
